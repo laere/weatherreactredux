@@ -8,6 +8,16 @@ const helpers = {
 
   dateConversion: num => {
     return new Date(num).toString();
+  },
+
+  capitalizeFirstLetter: str => {
+    const capitalizedStr = str.split(' ').map(word => {
+      const firstLetter = word.slice(0, 1).toUpperCase();
+      const rest = word.slice(1);
+      return firstLetter.concat(rest);
+    });
+
+    return capitalizedStr.join(' ');
   }
 
 };

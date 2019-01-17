@@ -41,7 +41,7 @@ class WeatherContent extends React.Component {
         {this.renderTemperatures()}
         <div>
           <img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} alt="weather" />
-          <div>{weather.weather[0].description}</div>
+          <div>{weather.weather.main}</div>
         </div>
         <div>Wind: {weather.wind.speed} mph</div>
         {this.renderDates()}
